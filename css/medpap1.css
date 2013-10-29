@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.floatR {
+	float: right;
+}
+.mainNavContainer {
+	background-color: #007d26;
+	margin: 0px 2px;
+}
+.telLarge {
+	float: right;
+}
+.topSlogan {
+	float: right;
+}
+.greyBox1 {
+	background-color: #d8d7d7;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#000;
+	font-size: small;
+	}
+.greyBox2 {
+	background-color: #a8a7a7;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#fff;
+	}
+.greyBox3 {
+	background-color: #ecebeb;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#000;
+	}
+.greenBox1 {
+	background-color: #007d26;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#fff;
+	}
+.clearBox1 {
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#a09f9f;
+	}
