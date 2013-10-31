@@ -22,16 +22,17 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
-  color: #222222;
-  padding: 0;
-  margin: 0;
-  font-weight: 300;
-  font-family: Open Sans Condensed, Arial, sans-serif;
-  font-style: normal;
-  line-height: 1;
-  position: relative;
-  cursor: default; }
+	background: white;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+	font-family: Open Sans Condensed, Arial, sans-serif;
+	font-style: normal;
+	line-height: 1;
+	position: relative;
+	cursor: default;
+}
 
 a:hover {
   cursor: pointer; }
@@ -152,12 +153,13 @@ select {
 @media only screen {
   .column,
   .columns {
-    position: relative;
-    /*padding-left: 0.9375em;
+	position: relative;
+	/*padding-left: 0.9375em;
   padding-right: 0.9375em;*/
   padding-left: 2px;
-  padding-right: 2px;
-    float: left; }
+	padding-right: 2px;
+	float: left;
+}
 
   .small-1 {
     position: relative;
@@ -286,8 +288,9 @@ select {
     width: 41.66667%; }
 
   .large-6 {
-    position: relative;
-    width: 50%; }
+	position: relative;
+	width: 50%;
+}
 
   .large-7 {
     position: relative;
@@ -2847,12 +2850,14 @@ label.error {
       margin-top: 45px; }
 
 .top-bar {
-  overflow: hidden;
-  height: 45px;
-  line-height: 45px;
-  position: relative;
-  background: #111111;
-  margin-bottom: 0; }
+	overflow: hidden;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	background: #007d26;
+	margin-bottom: 0px;
+	background-color: #007d26;
+}
   .top-bar ul {
     margin-bottom: 0;
     list-style: none; }
@@ -2937,12 +2942,13 @@ label.error {
   -moz-transition: left 300ms ease-out;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
-    width: 100%;
-    height: auto;
-    display: block;
-    background: #222222;
-    font-size: 16px;
-    margin: 0; }
+	width: 100%;
+	height: auto;
+	display: block;
+	background: #007d26;
+	font-size: 16px;
+	margin: 0;
+}
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
     border-bottom: solid 1px #2b2b2b;
@@ -3086,7 +3092,7 @@ label.error {
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
-      background: black;
+      background: #007d26;
       color: white; }
     .top-bar-section li a:not(.button) {
       padding: 0 15px;

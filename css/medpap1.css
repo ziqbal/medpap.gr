@@ -4,16 +4,32 @@
 .floatR {
 	float: right;
 }
+.topNav {
+	padding-top: 25px;
+	font-size: 0.8em;
+}
 .mainNavContainer {
 	background-color: #007d26;
-	margin: 0px 2px;
+	margin: 0px 0px;
 }
-.telLarge {
+.telLarge1 {
 	float: right;
+	font-size: 2em;
+	color: #666;
+	padding: 25px 8px 0 0;	
+}
+.telLarge2 {
+	float: right;
+	font-size: 2em;
+	color: #007d26;
+	padding-top: 25px;	
 }
 .topSlogan {
 	float: right;
+	font-size: 1.2em;
+	color: #007d26;
 }
+
 .greyBox1 {
 	background-color: #d8d7d7;
 	padding: 10px 10px;
@@ -32,6 +48,7 @@
 	padding: 10px 10px;
 	margin: 0 0 4px 0;
 	color:#000;
+	font-size: small;
 	}
 .greenBox1 {
 	background-color: #007d26;
@@ -44,3 +61,68 @@
 	margin: 0 0 4px 0;
 	color:#a09f9f;
 	}
+.boxHeading1{
+	color: #007d26;
+	font-size: 2em;
+	padding-bottom: 4px;
+}
+.boxHeading2{
+	color: #000000;
+	font-size: 1.3em;
+	padding-bottom: 4px;
+}
+.boxItem2{
+	font-size: 1.3em;
+	padding-bottom: 4px;
+}
+.boxHeading3{
+	color: #fe0000;
+	font-size: 2em;
+	padding-bottom: 4px;
+}
+.boxImage3{
+	padding-top: 8px;
+}
+.rightNaviItem{
+	font-size: 1.3em;
+	padding-bottom: 4px;
+}
+.mainContent6 {
+	padding: 0px 10px 0px 10px;
+}
+.mainContent6 ul {
+	margin-left: 20px;
+}
+.breadcrumb {
+	font-size: 0.8em;
+}
+.pageTitle1 {
+	color: #007d26;
+    font-size: 2em;
+	padding-bottom: 4px;
+}	
+.pageTitle2 {
+	color: #007d26;
+	font-size: 1.3em;
+	padding-bottom: 4px;
+}
+.pageQuote {
+	color: #999;
+	font-size: 1.1em;
+	padding-bottom: 15px;
+}
+.spacer1 {
+	height: 15px;
+}
+.spacer2 {
+	height: 105px;
+}
+.spacer3 {
+	height: 50px;
+}
+.dataPolicy {
+	font-size: 0.8em;
+}
+.credits{
+	font-size: 0.8em;
+}
