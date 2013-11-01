@@ -1,0 +1,20 @@
+<?php
+
+(isset($children[0]))?$liClass='has-dropdown':$liClass='';
+
+?>
+
+<li class="<?=$liClass?>">
+
+<a href="<?=$url?>"><?=$title?></a>
+<ul class="dropdown">
+
+<?php foreach($children as $child){?>
+<li><a href="<?=$child['_url_']?>"><?=$child['_displaytext_']?></a></li>
+<?php }?>
+</ul>
+
+</li>
+
+<li class="divider"></li>
+
