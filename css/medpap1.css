@@ -122,9 +122,32 @@
 .spacer3 {
 	height: 50px;
 }
+.spacer4 {
+	height: 4px;
+}
 .dataPolicy {
 	font-size: 0.8em;
 }
 .credits{
 	font-size: 0.8em;
+}
+.greenHomeBox1 {
+	background-color: #007d26;
+	color: #fff;
+	}
+.greenHomeBox1L {
+	float: left;
+	}
+.greenHomeBox1R {
+	float: right;
+	}
+.clearfloat {
+	clear:both;
+	}
+.greyBox3L {
+	width: 50%;
+	float: left;
+}.greyBox3R {
+	width: 50%;
+	float: right;
 }
