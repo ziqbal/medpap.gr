@@ -1,0 +1,28 @@
+<?php if($itemCounter==0){ ?>
+
+<style>
+.sitemapLevel1{
+	margin-left:10px;
+}
+.sitemapLevel2{
+	margin-left:20px;
+}
+.sitemapLevel3{
+	margin-left:30px;
+}
+.sitemapLevel4{
+	margin-left:40px;
+}
+.sitemapLevel5{
+	margin-left:50px;
+}
+</style>
+
+
+<?php }?>
+
+<div class='sitemapItem'>
+<a href="<?=templateVarDataProp('_url_')?>">
+<div class='sitemapLevel<?=$_childofcurrentpage_?>'><?=templateVarDataProp('_displaytext_')?></div>
+</a>
+</div>

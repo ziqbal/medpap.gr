@@ -1,0 +1,14 @@
+<?php if($itemCounter==0){ ?>
+
+<div class="greenBox1">Search</div>
+<div class="greyBox1">
+<div class="rightNavi">
+<?=templateVarDataProp('strapline')?>
+<br/><br/>
+<form action="<?=$url?>" method='get'>
+<input type='text' name='s' placeholder='<?=templateVarDataProp('placeholder')?>'/>
+</form>
+</div>
+</div>
+
+<?php }?>
