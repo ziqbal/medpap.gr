@@ -22,7 +22,11 @@
 <?php }?>
 
 <div class='sitemapItem'>
+<?php if($starHasContent){?>
 <a href="<?=templateVarDataProp('_url_')?>">
+<?php }?>
 <div class='sitemapLevel<?=$level?>'><?=templateVarDataProp('_displaytext_')?></div>
+<?php if($starHasContent){?>
 </a>
+<?php }?>
 </div>

@@ -1,5 +1,13 @@
 <?php if($level>2){?>
 
-<a href='<?=$url?>'><div class="rightNaviItem"><?=$title?></div></a>
+<?php if(templateVarDataProp('_hascontent_')){?>
+<a href='<?=$url?>'>
+<?php }?>
+
+	<div class="rightNaviItem"><?=$title?></div>
+
+<?php if(templateVarDataProp('_hascontent_')){?>
+</a>
+<?php }?>
 
 <?php }?>
