@@ -1,0 +1,49 @@
+<?php
+
+$starHasContent=false;
+
+$sitemap=array();
+if($starpageLoadFirstTime){
+	//$id=0;
+	$sitemap=dbTreeGetSiteMap($id);
+	//logWrite($sitemap[0]);
+}
+
+?>
+
+<?php if($starpageLoadFirstTime){ ?>
+
+<style>
+.sitemapLevel1{
+	margin-left:10px;
+}
+.sitemapLevel2{
+	margin-left:20px;
+}
+.sitemapLevel3{
+	margin-left:30px;
+}
+.sitemapLevel4{
+	margin-left:40px;
+}
+.sitemapLevel5{
+	margin-left:50px;
+}
+</style>
+
+
+<?php }?>
+
+<?php foreach($sitemap as $sm){?>
+
+<div class='sitemapItem'>
+<div class='sitemapLevel<?=$sm['_level_']?>'>
+<?php if($sm['_hascontent_']){?>
+<a href="<?=$sm['_url_']?>"><?=$sm['_displaytext_']?></a>
+<?php }else{?>
+     <?=$sm['_displaytext_']?>
+<?php }?>
+</div>
+</div>
+
+<?php }?>
