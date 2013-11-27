@@ -1,3 +1,5 @@
+@import "foundation/components/orbit";
+
 meta.foundation-mq-small {
   font-family: "only screen and (min-width: 768px)";
   width: 768px; }
@@ -3263,18 +3265,20 @@ label.error {
     .orbit-container .orbit-slides-container > * {
       position: absolute;
       top: 0;
-      width: 100%;
+      width: 100%;	
       margin-left: 100%; }
       .orbit-container .orbit-slides-container > *:first-child {
         margin-left: 0%; }
       .orbit-container .orbit-slides-container > * .orbit-caption {
         position: absolute;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        width: 100%;
+        background-color: rgba(145,145, 145, 0.7);
+        /*color: white;*/
+        /*width: 100%;*/
+	    height: 6.65em;
         padding: 10px 14px;
-        font-size: 0.875em; }
+		margin-bottom:15px;
+        /*font-size: 0.875em; */}
   .orbit-container .orbit-slide-number {
     position: absolute;
     top: 10px;
@@ -3318,10 +3322,23 @@ label.error {
       border-color: transparent transparent transparent black; }
   .orbit-container:hover .orbit-timer > span {
     display: block; }
-  .orbit-container .orbit-prev,
-  .orbit-container .orbit-next {
+  .orbit-container .orbit-prev {
+	position: absolute;
+	top: 82%;
+	margin-top: -25px;
+	margin-left: 73%;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 50px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	text-indent: -9999px !important;
+	z-index: 10;
+}
+	
+    .orbit-container .orbit-next {
     position: absolute;
-    top: 50%;
+    top: 82%;
     margin-top: -25px;
     background-color: rgba(0, 0, 0, 0.6);
     width: 50px;
