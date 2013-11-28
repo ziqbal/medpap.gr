@@ -1,12 +1,13 @@
 <?php
 if($itemCounter==0){
 	$href='';
-	if($link=='') $href=$url;
+	if(templateVarDataProp('link')=='') $href=templateVarDataProp('_url_');
+	(substr($href,0,4)=="http")?$target="_blank":$target="";
 ?>
 
 <div class="large-3 columns">
 <a href="<?=$href?>" target="<?=$target?>">
-	<img title='<?=$title?>' src="<?=$src3?>">
+	<img title='<?=templateVarDataProp('_displaytext_')?>' src="<?=templateVarDataProp('_img_src_3_')?>">
 </a>
 </div>
 

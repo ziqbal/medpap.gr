@@ -1,10 +1,14 @@
+<?php
+if(templateVarDataProp('link')=='') $href=templateVarDataProp('_refurl_');
+(substr($href,0,4)=="http")?$target="_blank":$target="";
 
-<a href="<?=$refurl?>" target="<?=$target?>">
+?>
+<a href="<?=$href?>" target="<?=$target?>">
 
 
 <div class="greyBox1">
-      <div class="boxHeading1"><?=$title?></div>
-      <?=templateVarDataProp('strapline');?>
+      <div class="boxHeading1"><?=templateVarDataProp('_displaytext_')?></div>
+      <?=templateVarDataProp('strapline')?>
 </div>
 
 </a>

@@ -7,15 +7,15 @@
 <?php }?>
 
 
-<?php if($title!=''){?>
-<div class="pageTitle2"><?=$title?></div>
+<?php if(templateVarDataProp('_displaytext_')!=''){?>
+<div class="pageTitle2"><?=templateVarDataProp('_displaytext_')?></div>
 <?php }?>
 
-<?php if($sd!=''){?>
-<?=$sd?>
+<?php if(templateVarDataProp('shortdescription')!=''){?>
+<?=templateVarDataProp('shortdescription')?>
 <?php }?>
 
-<?php if($ld!=''){?>
-<?=$ld?>
+<?php if(templateVarDataProp('longdescription')!=''){?>
+<?=templateVarDataProp('longdescription')?>
 <?php }?>
 

@@ -5,7 +5,7 @@ $starHasContent=false;
 $sitemap=array();
 if($starpageLoadFirstTime){
 	//$id=0;
-	$sitemap=dbTreeGetSiteMap($ref);
+	$sitemap=dbTreeGetSiteMap(templateVarDataProp('_ref_'));
 	//logWrite($sitemap[0]);
 }
 
