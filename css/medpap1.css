@@ -39,7 +39,7 @@
 	}
 .greyBox2 {
 	background-color: #a8a7a7;
-	padding: 10px 10px;
+	padding: 10px 10px 10px 10px;
 	margin: 0 0 4px 0;
 	color:#fff;
 	}
@@ -50,6 +50,13 @@
 	color:#000;
 	font-size: small;
 	}
+.greyBox4 {
+	background-color: #d8d7d7;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#000;
+	font-size: small;
+	}	
 .greenBox1 {
 	background-color: #007d26;
 	padding: 10px 10px;
@@ -66,7 +73,7 @@
 .boxHeading1{
 	color: #007d26;
 	font-size: 2em;
-	padding-bottom: 4px;
+	padding-bottom: 5px;
 }
 .boxHeading2{
 	color: #000000;
@@ -160,4 +167,30 @@
 }.greyBox3R {
 	width: 50%;
 	float: right;
+}
+.hallTitleBox {
+	padding-left: 26%;
+}
+.offerImage {
+	height: 273px;
+}
+.OCTitle {
+	font-size: 2em;
+	color: #fff;
+	padding-top: 16px;
+}
+.OCSubtitle {
+	font-size: 0.8em;
+	color: #000;
+	margin-top: -8px
+}
+@media only screen and (max-width: 767px) {
+.hallTitleBox {
+	padding-left: 10px;
+}
+.offerImage {
+	height: 273px;
+	text-align: center;
+	margin-bottom: 5px;
+}
 }
