@@ -9,11 +9,14 @@
 <link rel="stylesheet" href="css/foundation.css">
 <link rel="stylesheet" href="css/medpap1.css">
 
+
+
 <!-- Fonts -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,greek' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,greek' rel='stylesheet' type='text/css'>
 <!----------->
 
 <script src="js/vendor/custom.modernizr.js"></script>
+<script src="jquery-whenready.js"></script>
 </head>
 <body>
 <div class="row">
@@ -99,86 +102,55 @@
   <!--{block401-->
   <div class="large-3 columns"><img src="slices/offer.png"> </div>
   <!--}block401--> 
-  <!--{block301-->
-  <div class="large-9 columns">
   
   
+  <div class="large-9 columns">  
+ <!-- First Band (Slider) -->
   
-  
-  <div class="orbit-container">
-  <ul data-orbit class="example-orbit orbit-slides-container">
-    <li>
-      <img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 1" />
+    <ul data-orbit id="slider">
+  <!--{block407-->
+      <li><img src="slices/banner/1.jpg" />
       <div class="orbit-caption">
-        Caption One.
+      <div class="OCTitle">Αξονικός Τομογράφος</div>
+      <div class="OCSubtitle">Subtitle</div>
       </div>
-    </li>
-    <li class="active">
-      <img src="http://placehold.it/1000x300/EE964D/fff" alt="slide 2" />
+      </li>
+      <li><img src="slices/banner/7.jpg" />
       <div class="orbit-caption">
-        Caption Two.
+      <div class="OCTitle">Σεβασμός στον άνθρωπο</div>
+      <div class="OCSubtitle">Subtitle</div>
       </div>
-    </li>
-    <li>
-      <img src="http://placehold.it/1000x300/FDC43D/fff" alt="slide 3" />
+      </li>
+      <li><img src="slices/banner/3.jpg" />
       <div class="orbit-caption">
-        Caption Three.
+      <div class="OCTitle">Triplex καρδιάς</div>
+      <div class="OCSubtitle">Subtitle</div>
       </div>
-    </li>
-  </ul>
-
-  <!-- Navigation Arrows -->
-  <a href="#" class="orbit-prev">Prev <span></span></a>
-  <a href="#" class="orbit-next">Next <span></span></a>
-
-  <!-- Slide Numbers -->
-  <div class="orbit-slide-number">
-    <span>1</span> of <span>3</span>
-  </div>
-
-  <!-- Timer and Play/Pause Button -->
-  <div class="orbit-timer">
-    <span></span>
-    <div class="orbit-progress"></div>
-  </div>
-</div>
-
-<!-- Bullets -->
-<ol class="orbit-bullets">
-  <li data-orbit-slide-number="1"></li>
-  <li data-orbit-slide-number="2" class="active"></li>
-  <li data-orbit-slide-number="3"></li>
-</ol>
-
-
-
-
- </div>
-  <!--}block301-->
-  
-  <!--
-   
- 
-<!-- First Band (Slider) 
-
-  <div class="row">
-    <div class="large-12 columns">
-    <ul data-orbit>
-      <li><img src="http://placehold.it/1000x400&text=[ img 1 ]" /></li>
-      <li><img src="http://placehold.it/1000x400&text=[ img 2 ]" /></li>
-      <li><img src="http://placehold.it/1000x400&text=[ img 3 ]" /></li>
-      <li><img src="http://placehold.it/1000x400&text=[ img 4 ]" /></li>
-    </ul>
-    <!-- <div id="slider">
-      
-    </div>
+      </li>
+      <li><img src="slices/banner/4.jpg" />
+      <div class="orbit-caption">
+      <div class="OCTitle">Υπερηχογράφημα</div>
+      <div class="OCSubtitle">Subtitle</div>
+      </div>
+      </li>
+      <li><img src="slices/banner/5.jpg" />
+      <div class="orbit-caption">
+      <div class="OCTitle">Αιματολογικά τεστ</div>
+      <div class="OCSubtitle">Subtitle</div>
+      </div>
+      </li>
+      <li><img src="slices/banner/6.jpg" />
+      <div class="orbit-caption">
+      <div class="OCTitle">Αγιόπιστη διάγνωση</div>
+      <div class="OCSubtitle">Subtitle</div>
+      </div>
+      </li>
+  <!--}block407-->
+      </ul>
     
-    <hr />
-    </div>
-  </div>
-  
-  --> 
-   
+ </div>
+ 
+
 </div>
 
 <div class="row">
@@ -317,12 +289,10 @@
     <br/>
   </div>
 </div>
-<script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script> 
-<script src="js/foundation.min.js"></script> 
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+ <script src="js/foundation/foundation.orbit.js"></script> 
 <!--
   
   <script src="js/foundation/foundation.js"></script>
@@ -362,5 +332,18 @@
 <script>
     $(document).foundation();
   </script>
+ <script type="text/javascript">
+$(document).foundation({
+  orbit: {
+    animation: 'slide',
+    timer_speed: 1000,
+    pause_on_hover: true,
+    animation_speed: 500,
+    navigation_arrows: true,
+    bullets: false,
+    next_on_click: true
+  }
+});
+</script>
 </body>
 </html>
