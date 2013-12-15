@@ -4,6 +4,22 @@
 .floatR {
 	float: right;
 }
+.floatR a {
+	color: #333;
+	text-decoration: none;
+}
+.floatR a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.floatR a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.floatR a:active {
+	color: #000;
+	text-decoration: none;
+}
 .topNav {
 	padding-top: 25px;
 	font-size: 0.8em;
@@ -83,7 +99,27 @@
 .boxItem2{
 	font-size: 1.3em;
 	padding-bottom: 4px;
+	color: #fff;
 }
+.boxItem2 a {
+    color: #fff;
+	text-decoration: none;
+}
+.boxItem2 a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.boxItem2 a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.boxItem2 a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+
+
 .boxHeading3{
 	color: #fe0000;
 	font-size: 2em;
