@@ -130,12 +130,46 @@
 	font-size: 2em;
 	padding: 10px 0px 4px 0px;
 }
+.boxHeading4 a {
+    color: #fff;
+	text-decoration: none;
+}
+.boxHeading4 a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.boxHeading4 a:hover{
+	color: #000;
+	text-decoration: none;
+}
+.boxHeading4 a:active {
+	color: #F2343F;
+	text-decoration: none;
+}
+
 .boxImage3{
 	padding-top: 8px;
 }
 .rightNaviItem{
 	font-size: 1.3em;
 	padding-bottom: 4px;
+	color: #999;
+}
+.rightNaviItem a {
+	color: #999;
+	text-decoration: none;
+}
+.rightNaviItem a:visited {
+	color: #999;
+	text-decoration: none;
+}
+.rightNaviItem a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.rightNaviItem a:active {
+	color: #000;
+	text-decoration: none;
 }
 .mainContent6 {
 	padding: 0px 10px 0px 10px;
@@ -144,7 +178,24 @@
 	margin-left: 20px;
 }
 .breadcrumb {
+	color: #666;
 	font-size: 0.8em;
+}
+.breadcrumb a {
+	color: #666;
+	text-decoration: none;
+}
+.breadcrumb a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.breadcrumb a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.breadcrumb a:active {
+	color: #000;
+	text-decoration: none;
 }
 .pageTitle1 {
 	color: #007d26;
