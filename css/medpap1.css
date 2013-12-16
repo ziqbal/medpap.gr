@@ -4,6 +4,22 @@
 .floatR {
 	float: right;
 }
+.floatR a {
+	color: #333;
+	text-decoration: none;
+}
+.floatR a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.floatR a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.floatR a:active {
+	color: #000;
+	text-decoration: none;
+}
 .topNav {
 	padding-top: 25px;
 	font-size: 0.8em;
@@ -50,6 +66,23 @@
 	color:#000;
 	font-size: small;
 	}
+.greyBox3 a {
+	color:#000;
+	text-decoration: none;
+}
+.greyBox3 a:visited {
+	color:#000;
+	text-decoration: none;
+}
+.greyBox3 a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.greyBox3 a:active {
+	color: #666;
+	text-decoration: none;
+}
+	
 .greyBox4 {
 	background-color: #d8d7d7;
 	padding: 10px 10px;
@@ -83,7 +116,27 @@
 .boxItem2{
 	font-size: 1.3em;
 	padding-bottom: 4px;
+	color: #fff;
 }
+.boxItem2 a {
+    color: #fff;
+	text-decoration: none;
+}
+.boxItem2 a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.boxItem2 a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.boxItem2 a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+
+
 .boxHeading3{
 	color: #fe0000;
 	font-size: 2em;
@@ -94,12 +147,46 @@
 	font-size: 2em;
 	padding: 10px 0px 4px 0px;
 }
+.boxHeading4 a {
+    color: #fff;
+	text-decoration: none;
+}
+.boxHeading4 a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.boxHeading4 a:hover{
+	color: #000;
+	text-decoration: none;
+}
+.boxHeading4 a:active {
+	color: #F2343F;
+	text-decoration: none;
+}
+
 .boxImage3{
 	padding-top: 8px;
 }
 .rightNaviItem{
 	font-size: 1.3em;
 	padding-bottom: 4px;
+	color: #999;
+}
+.rightNaviItem a {
+	color: #999;
+	text-decoration: none;
+}
+.rightNaviItem a:visited {
+	color: #999;
+	text-decoration: none;
+}
+.rightNaviItem a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.rightNaviItem a:active {
+	color: #000;
+	text-decoration: none;
 }
 .mainContent6 {
 	padding: 0px 10px 0px 10px;
@@ -108,7 +195,24 @@
 	margin-left: 20px;
 }
 .breadcrumb {
+	color: #666;
 	font-size: 0.8em;
+}
+.breadcrumb a {
+	color: #666;
+	text-decoration: none;
+}
+.breadcrumb a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.breadcrumb a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.breadcrumb a:active {
+	color: #000;
+	text-decoration: none;
 }
 .pageTitle1 {
 	color: #007d26;
