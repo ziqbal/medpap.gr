@@ -298,6 +298,7 @@
   </div>
 </div>
 <script src="js/vendor/jquery.js"></script>
+
 <script src="js/foundation.min.js"></script> 
 <!--
   
@@ -342,13 +343,21 @@
 
 <style>
 #templateForm{
-	display: none;
 }
 </style>
 <div id='templateForm'>
 DATE:
-<input type='text' name='date1'/>
+<input id='formdatepicker' type='text' name='date1'/>
 </div>
+
+<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<script>
+$( "#formdatepicker" ).datepicker({
+    inline: true,
+    dateFormat: 'dd-mm-yy'
+});
+</script>
 
 </body>
 </html>
