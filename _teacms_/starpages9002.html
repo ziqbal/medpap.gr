@@ -63,6 +63,9 @@
 
 jqueryWhenReady.run(function(){
 
+
+	$("#templateForm").css("display","block").prependTo("#layoutcontact");
+
 	var timeNow=new Date().getTime();
 	var query = window.location.search.slice(1);
 	var inprogress=false;
