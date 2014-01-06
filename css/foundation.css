@@ -3208,7 +3208,7 @@ label.error {
     list-style-type: none;
     margin: 0; }
     .slideshow-wrapper ul li,
-    .slideshow-wrapper ul li .orbit-caption {
+    .slideshow-wrapper ul li .orbit-caption .OCBadge{
       display: none; }
     .slideshow-wrapper ul li:first-child {
       display: block; }
@@ -3272,13 +3272,34 @@ label.error {
       .orbit-container .orbit-slides-container > * .orbit-caption {
         position: absolute;
         bottom: 0;
-        background-color: rgba(145,145, 145, 0.7);
+        background-color: rgba(145,145, 145, 0.8);
         /*color: white;*/
         /*width: 100%;*/
 	    height: 6.65em;
         padding: 10px 14px;
 		margin-bottom:15px;
         /*font-size: 0.875em; */}
+	  .OCBadge {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(242,52, 63, 0.9);
+	/*color: white;*/
+        /*width: 100%;*/
+	    
+    padding: 10px 10px;
+	margin:0 0 75px 160px;
+	/*font-size: 0.875em; */
+		
+	border-radius: 50%;
+	width: 4em;
+	height: 4em;
+    /* width and height can be anything, as long as they're equal */}
+   .OCBadgeTitle {
+	color:#fff;
+	font-size: 1.8em;
+	text-align:center;
+	margin-top: -3px;
+		 }
   .orbit-container .orbit-slide-number {
     position: absolute;
     top: 10px;
