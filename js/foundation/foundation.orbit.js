@@ -381,7 +381,7 @@
       resume_on_mouseout: true,
       animation_speed: 900,
       stack_on_small: false,
-      navigation_arrows: true,
+      navigation_arrows: false,
       slide_number: true,
       slide_number_text: 'of',
       container_class: 'orbit-container',
