@@ -240,7 +240,7 @@
 	height: 50px;
 }
 .spacer4 {
-	height: 4px;
+	height: 6px;
 }
 .spacer5 {
 	height: 2px;
@@ -290,6 +290,17 @@
 	font-size: 0.8em;
 	color: #000;
 	margin-top: -8px
+}
+.OCTitle2 {
+	font-size: 2em;
+	color: #fff;
+	margin-top: -7px;
+	line-height: 1em;
+}
+.OCSubtitle2 {
+	font-size: 0.8em;
+	color: #000;
+	margin-top: 2px
 }
 @media only screen and (max-width: 767px) {
 .hallTitleBox {
