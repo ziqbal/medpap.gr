@@ -228,7 +228,8 @@
 	color: #999;
 	font-size: 1.1em;
 	padding-bottom: 15px;
-	line-height: normal;
+	line-height: 1.2em !important;
+	height: 3.8em;
 }
 .spacer1 {
 	height: 15px;
@@ -302,6 +303,7 @@
 	color: #000;
 	margin-top: 2px
 }
+
 @media only screen and (max-width: 767px) {
 .hallTitleBox {
 	padding-left: 10px;

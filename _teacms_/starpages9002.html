@@ -8,7 +8,7 @@
 <form id='layoutcontact' class="well">
 
 <div class="">
-<div class='layoutcontactLabel'><?=translateMemoryV2("Name")?></div>
+<div class='layoutcontactLabel'><?=translateMemoryV2("Όνομα")?></div>
 <input id='layoutcontactform_name' name='layoutcontactform_name' type="text" placeholder="" size="40" value='<?=templateDefineGet('name')?>'>
 </div>
 
@@ -18,7 +18,7 @@
 </div>
 
 <div class="">
-<div class='layoutcontactLabel'><?=translateMemoryV2("Message")?></div>
+<div class='layoutcontactLabel'><?=translateMemoryV2("Μήνυμα")?></div>
 <textarea class="" id='layoutcontactform_message' name='layoutcontactform_message' cols='60' rows='10'><?=templateDefineGet('message')?></textarea>
 </div>
 
@@ -38,14 +38,15 @@
 
 .layoutcontactContainer{
 	clear: both;
+	font-weight: 300;
+	font-family: "Open Sans Condensed", Arial, sans-serif;
 }
 .layoutcontacterror{
 	background-color: #fdd;
 }
 .layoutcontactLabel{
 	margin-top: 10px;
-	font-size: smaller;
-	font-weight: bold;
+	font-size: small;
 }
 #layoutcontactform_email{
 	width:100%;
@@ -57,6 +58,8 @@
 	width:100%;
 	height:200px;
 }
+#formsendbutton {
+	}
 </style>
 
 <script>
