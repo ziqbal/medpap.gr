@@ -148,19 +148,19 @@
 	padding: 10px 0px 4px 0px;
 }
 .boxHeading4 a {
-    color: #fff;
+	color: #007d26;
 	text-decoration: none;
 }
 .boxHeading4 a:visited {
-	color: #fff;
+	color: #007d26;
 	text-decoration: none;
 }
 .boxHeading4 a:hover{
-	color: #000;
+	color: #F2343F;
 	text-decoration: none;
 }
 .boxHeading4 a:active {
-	color: #F2343F;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -253,8 +253,8 @@
 	font-size: 0.8em;
 }
 .greenHomeBox1 {
-	background-color: #007d26;
-	color: #fff;
+	background-color: #c1e29e;
+	color: #333;
 	}
 .greenHomeBox1L {
 	float: left;
