@@ -70,7 +70,7 @@ var layoutSearchRun=function(){
 	}
 
 	var sq=getQueryVariable('s');
-	sq=accentsTidy(sq);
+	//sq=accentsTidy(sq);
 
 	if(sq.length>0){
 		sq=sq.toLowerCase();
@@ -88,7 +88,7 @@ var layoutSearchRun=function(){
 				var level=sb[key][2];
 				var childofcurrentpage=sb[key][3];
 				var hascontent=sb[key][4];
-				words=accentsTidy(words);
+				//words=accentsTidy(words);
 				//console.log(words);
 				if(words.indexOf(sq)!=-1){
 					if(hascontent==1){
