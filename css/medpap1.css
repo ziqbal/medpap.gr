@@ -96,6 +96,12 @@
 	margin: 0 0 4px 0;
 	color:#fff;
 	}
+.greenBox2 {
+	background-color: #c1e29e;
+	padding: 10px 10px;
+	margin: 0 0 4px 0;
+	color:#000;
+	}
 .clearBox1 {
 	padding: 10px 10px;
 	margin: 0 0 4px 0;
@@ -107,6 +113,22 @@
 	color: #007d26;
 	font-size: 2em;
 	padding-bottom: 5px;
+}
+.boxHeading1 a {
+    color: #007d26;
+	text-decoration: none;
+}
+.boxHeading1 a:visited {
+	color: #007d26;
+	text-decoration: none;
+}
+.boxHeading1 a:hover{
+	color: #000;
+	text-decoration: none;
+}
+.boxHeading1 a:active {
+	color: #007d26;
+	text-decoration: none;
 }
 .boxHeading2{
 	color: #000000;
