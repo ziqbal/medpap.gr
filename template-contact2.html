@@ -213,6 +213,88 @@
 
 
 
+
+<script>
+    $(document).foundation();
+  </script>
+
+
+<style>
+#templateForm{
+	text-align: left;
+	font-size:small;
+}
+</style>
+<div id='templateForm'>
+Όνομα:
+<input id='name' type='text' name='name'/>
+Όνομα:
+<input id='name' type='text' name='name'/>
+Ημερομηνία Γέννησης:
+<input id='formdatepicker' type='text' name='date1'/>
+</div>
+Φύλο:
+<br><br>
+<input type="radio" name="Sex" value="Άνδρας"> Άνδρας <br>
+<input type="radio" name="Sex" value="Γυναίκα"> Γυναίκα <br><br>
+Οικ. Κατάσταση :
+<input id='name' type='text' name='name'/>
+Διεύθυνση:
+<input id='name' type='text' name='name'/>
+Πόλη/Περιοχή:
+<input id='name' type='text' name='name'/>
+Τ.Κ.:
+<input id='name' type='text' name='name'/>
+Τηλέφωνο (Σταθ. ή Κινητό):
+<input id='name' type='text' name='name'/>
+Email:
+<input id='name' type='text' name='name'/>
+Στρατιωτικές Υποχρεώσεις (Μόνο για Άνδρες):<br><br>
+<input type="radio" name="Military" value="Εκπληρωμένες"> Εκπληρωμένες <br>
+<input type="radio" name="Military" value="Ανεκπλήρωτες"> Ανεκπλήρωτες <br><br>
+Σπουδές:
+<input id='name' type='text' name='name'/>
+Εκπαιδευτικό Ίδρυμα:
+<input id='name' type='text' name='name'/>
+Σχολή / Τμήμα: 
+<input id='name' type='text' name='name'/>
+Βαθμός Πτυχίου: 
+<input id='name' type='text' name='name'/>
+Ξένες Γλώσσες:<br><br>
+
+<input type="checkbox" name="Language" value="Αγγλικά"> Αγγλικά <br>
+<input type="checkbox" name="Language" value="Αγγλικά"> Γαλλικά <br>
+<input type="checkbox" name="Language" value="Αγγλικά"> Γερμανικά <br><br>
+Άλλη Γλώσσα:
+<input id='name' type='text' name='name'/>
+Γνώσεις Ηλ. Υπολογιστή:
+<input id='name' type='text' name='name'/>
+Περιγραφή Γνώσεων Η/Υ: 
+<input id='name' type='text' name='name'/>
+Επαγγελματική εμπειρία:
+<input id='name' type='text' name='name'/>
+Θέλετε να εργαστείτε στη Διεύθυνση/Τμήμα: 
+<input id='name' type='text' name='name'/>
+<br><br>
+
+<input id='submit' type='submit' name='Αποστολή'/>
+<br><br>
+<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<script>
+$( "#formdatepicker" ).datepicker({
+    inline: true,
+    dateFormat: 'dd-mm-yy'
+});
+</script>
+
+
+<br/>
+
+Στην περίπτωση που υπάρχει κάποια θέση που ταιριάζει σε εσάς, θα ενημερωθείτε άμεσα στα τηλέφωνα που θα μας δώσετε. 
+Τα στοιχεία σας φυλάσσονται και δεν πρόκειται να χρησιμοποιηθούν για κανέναν άλλο σκοπό πέραν της αξιολόγησης για τη θέση εργασίας που σας ενδιαφέρει.
+
+
       <!-- end .mainContent6 --> 
     </div>
     <!-- end .large-6 columns --></div>
@@ -248,12 +330,12 @@
 
 <!--{block405-->
     <div class="boxImage3"><img src="slices/pic3.jpg" alt="Pic3"></div>
-    <div class="boxImage3"><img src="slices/pic4.jpg" alt="Pic4"></div>
+    <div class="boxImage3"></div>
 <!--}block405-->
 
 
 <!--{block501-->
-    <div class="greenBox1">Search</div>
+    <div class="greenBox1">Search<span class="boxImage3"><img src="slices/pic4.jpg" alt="Pic4"></span></div>
     <div class="greyBox1">
       <div class="rightNavi">
 Παρακαλώ εισάγετε το όνομα ή μέρος του ονόματος της εξέτασης, στα ελληνικά ή στα αγγλικά
@@ -346,28 +428,6 @@
   
   --> 
 
-<script>
-    $(document).foundation();
-  </script>
-
-
-<style>
-#templateForm{
-}
-</style>
-<div id='templateForm'>
-DATE:
-<input id='formdatepicker' type='text' name='date1'/>
-</div>
-
-<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-<script>
-$( "#formdatepicker" ).datepicker({
-    inline: true,
-    dateFormat: 'dd-mm-yy'
-});
-</script>
 
 </body>
 </html>
