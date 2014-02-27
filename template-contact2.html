@@ -28,7 +28,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="large-6 columns"><img src="slices/logo.png"> </div>
+   <div class="large-6 columns"><a href="homepage-29.html" target="_self"><img src="slices/logo.png" alt="Αρχική" border="0"></a> </div>
   <div class="large-6 columns">
     <div class="floatR">
       <div class="telLarge2"> 5222 500</div>
@@ -226,13 +226,21 @@
 }
 </style>
 <div id='templateForm'>
-Όνομα:
+Επώνυμο:
 <input id='name' type='text' name='name'/>
 Όνομα:
 <input id='name' type='text' name='name'/>
 Ημερομηνία Γέννησης:
 <input id='formdatepicker' type='text' name='date1'/>
-</div>
+<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<script>
+$( "#formdatepicker" ).datepicker({
+    inline: true,
+    dateFormat: 'dd-mm-yy'
+});
+</script>
+
 Φύλο:
 <br><br>
 <input type="radio" name="Sex" value="Άνδρας"> Άνδρας <br>
@@ -279,15 +287,8 @@ Email:
 
 <input id='submit' type='submit' name='Αποστολή'/>
 <br><br>
-<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-<script>
-$( "#formdatepicker" ).datepicker({
-    inline: true,
-    dateFormat: 'dd-mm-yy'
-});
-</script>
 
+</div>
 
 <br/>
 
