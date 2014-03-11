@@ -328,6 +328,9 @@
 .searchStyle {
 	text-transform: uppercase;
 }
+.star101Container {
+	padding-bottom: 10px;
+}
 @media only screen and (max-width: 767px) {
 .hallTitleBox {
 	padding-left: 10px;

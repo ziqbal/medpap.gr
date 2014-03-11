@@ -399,7 +399,7 @@
       active_slide_class: 'active',
       orbit_transition_class: 'orbit-transitioning',
       bullets: false,
-      timer: false,
+      timer: true,
       variable_height: false,
       swipe: true,
       before_slide_change: noop,

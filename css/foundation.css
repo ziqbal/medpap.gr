@@ -3323,7 +3323,7 @@ label.error {
     z-index: 10; }
     .orbit-container .orbit-timer .orbit-progress {
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.0);
       display: block;
       width: 0%; }
     .orbit-container .orbit-timer > span {
