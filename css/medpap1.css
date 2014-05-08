@@ -3,6 +3,7 @@
 
 .floatR {
 	float: right;
+	text-align: right;
 }
 .floatR a {
 	color: #333;
@@ -332,6 +333,18 @@
 .star101Container {
 	padding-bottom: 10px;
 }
+.googleSearchField {
+	width: 350px;
+	overflow: hidden;
+	padding-right: -20px;
+	text-align: right;
+	float: right;
+	}
+.topRightNav {
+	text-align: right;
+	float: right;
+	padding: 25px 0 0 0px;
+	}	
 @media only screen and (max-width: 767px) {
 .hallTitleBox {
 	padding-left: 10px;
