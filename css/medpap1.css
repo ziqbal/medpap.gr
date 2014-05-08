@@ -334,9 +334,8 @@
 	padding-bottom: 10px;
 }
 .googleSearchField {
-	width: 350px;
+	width: 400px;
 	overflow: hidden;
-	padding-right: -20px;
 	text-align: right;
 	float: right;
 	}
