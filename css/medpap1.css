@@ -347,6 +347,22 @@
 	padding: 0px 0px 0 0px;
 	font-size: 0.8em;
 	}	
+.topRightNav a {
+	color: #666;
+	text-decoration: none;
+}
+.topRightNav a:visited {
+	color: #666;
+	text-decoration: none;
+}
+.topRightNav a:hover{
+	color: #007D26;
+	text-decoration: none;
+}
+.topRightNav a:active {
+	color: #000;
+	text-decoration: none;
+}
 @media only screen and (max-width: 767px) {
 .hallTitleBox {
 	padding-left: 10px;
