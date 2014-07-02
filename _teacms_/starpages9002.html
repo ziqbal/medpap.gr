@@ -1,7 +1,4 @@
-<?php if($starpageLoadFirstTime){
-	mailFormInitContact();
-?>
-
+<?php if($starpageLoadFirstTime){?>
 
 <div class='layoutcontactContainer'>
 
@@ -9,26 +6,29 @@
 
 <div class="">
 <div class='layoutcontactLabel'><?=translateMemoryV2("Όνομα")?></div>
-<input id='layoutcontactform_name' name='layoutcontactform_name' type="text" placeholder="" size="40" value='<?=templateDefineGet('name')?>'>
+<input id='layoutcontactform_name' name='layoutcontactform_name' type="text" placeholder="" size="40" value=''>
 </div>
 
 <div class="">
 <div class='layoutcontactLabel'><?=translateMemoryV2("Email")?></div>
-<input id='layoutcontactform_email' name='layoutcontactform_email' type="text" placeholder="" size="40" value='<?=templateDefineGet('email')?>'>
+<input id='layoutcontactform_email' name='layoutcontactform_email' type="text" placeholder="" size="40" value=''>
 </div>
 
 <div class="">
 <div class='layoutcontactLabel'><?=translateMemoryV2("Μήνυμα")?></div>
-<textarea class="" id='layoutcontactform_message' name='layoutcontactform_message' cols='60' rows='10'><?=templateDefineGet('message')?></textarea>
+<textarea class="" id='layoutcontactform_message' name='layoutcontactform_message' cols='60' rows='10'></textarea>
 </div>
 
 <br/>
 <div class="">
 <button id='formsendbutton' type="submit" class="btn"><?=translateMemoryV2("Send message")?></button>
-<img id='formsendbusy' width="16" height="11" src="data:image/gif;base64,R0lGODlhEAALAPQAAP///wAAANra2tDQ0Orq6gYGBgAAAC4uLoKCgmBgYLq6uiIiIkpKSoqKimRkZL6+viYmJgQEBE5OTubm5tjY2PT09Dg4ONzc3PLy8ra2tqCgoMrKyu7u7gAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA" alt=""/>
 </div>
 
-<?=templateDefineGet('FORMHV')?>
+<input type='hidden' id='_ref' name='_ref' value=''/>
+<input type='hidden' id='_url' name='_url' value=''/>
+<input type='hidden' id='_title' name='_title' value=''/>
+<input type='hidden' id='_time' name='_time' value=''/>
+<input type='hidden' id='_code' name='_code' value='0xbada55'/>
 
 </form>
 
@@ -62,41 +62,72 @@
 	}
 </style>
 
+<script type="text/javascript" src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+
 <script>
 
 jqueryWhenReady.run(function(){
 
 
-	$("#templateForm").css("display","block").prependTo("#layoutcontact");
-
 	var timeNow=new Date().getTime();
-	var query = window.location.search.slice(1);
-	var inprogress=false;
-	if(query=='o=k'){
-		alert("<?=translateMemoryV2("Thank you! We'll get back to you as soon as possible!")?>");
-	}
 
-	$('#formsendbusy').hide();
+	$("#templateForm").css("display","block").prependTo("#layoutcontact");
 
 	function validateEmail(email) {
 	    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\ ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	    return re.test(email);
 	}
 
-	$('#layoutcontact').submit(function() {
+	$('#formsendbutton').click(function() {
 
 		var name=$('#layoutcontactform_name');
 		($.trim(name.val())=="")?name.addClass('layoutcontacterror'):name.removeClass('layoutcontacterror');
+
 		var email=$('#layoutcontactform_email');
 		($.trim(email.val())=="")?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+
 		// trim email!!!
 		(!validateEmail(email.val()))?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+
 		var message=$('#layoutcontactform_message');
 		($.trim(message.val())=="")?message.addClass('layoutcontacterror'):message.removeClass('layoutcontacterror');
 
-		<?=templateDefineGet('FORMPR')?>
+		$('#_ref').val(document.referrer);
+		$('#_url').val(document.location);
+		$('#_title').val(document.title);
+
+		var d = new Date(); var dd = d.toDateString(); var dt = d.toTimeString();
+		$('#_time').val(timeNow+','+dd+','+dt);
+		$('#_code').val('');
+
+		var totalErrors=$('.layoutcontacterror').length;
+
+		if(totalErrors==0){
+
+			$('#formsendbusy').show();
+
+			setTimeout(function(){
+
+			    var form = $("#layoutcontact").serialize();
+
+			    Parse.initialize("<?=configGet("APP_PARSE_APIKEY1")?>", "<?=configGet("APP_PARSE_APIKEY2")?>");
+
+			    var ParseObject = Parse.Object.extend("ContactFormObject");
+
+			    var parseObject = new ParseObject();
+
+			    parseObject.save( {formdata:form} ).then(function(object) {
+
+			    	alert("Thank You!");
+
+			    });
+
+			}, 50);
+
+		}
 
 		return false;
+
 	});
 
 });
