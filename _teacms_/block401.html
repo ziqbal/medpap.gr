@@ -2,6 +2,7 @@
 if($itemCounter==0){
 	$href='';
 	if(templateVarDataProp('link')=='') $href=templateVarDataProp('_url_');
+	if(templateVarDataProp('_refurl_')!='') $href=templateVarDataProp('_refurl_');
 	(substr($href,0,4)=="http")?$target="_blank":$target="";
 ?>
 
