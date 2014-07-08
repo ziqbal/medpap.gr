@@ -69,64 +69,99 @@
 jqueryWhenReady.run(function(){
 
 
-	var timeNow=new Date().getTime();
+	$(function(){
 
-	$("#templateForm").css("display","block").prependTo("#layoutcontact");
+		if($("#_templateFormContainer").length){
 
-	function validateEmail(email) {
-	    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\ ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	    return re.test(email);
-	}
+			$(".layoutcontactContainer").hide();
 
-	$('#formsendbutton').click(function() {
+			$("#_templateFormContainer").submit(function(){
 
-		var name=$('#layoutcontactform_name');
-		($.trim(name.val())=="")?name.addClass('layoutcontacterror'):name.removeClass('layoutcontacterror');
+				setTimeout(function(){
 
-		var email=$('#layoutcontactform_email');
-		($.trim(email.val())=="")?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+				    var form = $("#_templateFormContainer").serializeArray();
+				    var json_str = JSON.stringify(form,undefined, 2); 
 
-		// trim email!!!
-		(!validateEmail(email.val()))?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+				    Parse.initialize("<?=configGet("APP_PARSE_APIKEY1")?>", "<?=configGet("APP_PARSE_APIKEY2")?>");
 
-		var message=$('#layoutcontactform_message');
-		($.trim(message.val())=="")?message.addClass('layoutcontacterror'):message.removeClass('layoutcontacterror');
+				    var ParseObject = Parse.Object.extend("ContactFormObject");
 
-		$('#_ref').val(document.referrer);
-		$('#_url').val(document.location);
-		$('#_title').val(document.title);
+				    var parseObject = new ParseObject();
 
-		var d = new Date(); var dd = d.toDateString(); var dt = d.toTimeString();
-		$('#_time').val(timeNow+','+dd+','+dt);
-		$('#_code').val('');
+				    parseObject.save( {pn:"<?=PROJECTNAME?>",s:"Contact2 Form",formdata:json_str} ).then(function(object) {
 
-		var totalErrors=$('.layoutcontacterror').length;
+				    	alert("Thank You!");
 
-		if(totalErrors==0){
+				    });
 
-			$('#formsendbusy').show();
+				}, 50);
 
-			setTimeout(function(){
+				return(false);
+			});
 
-			    var form = $("#layoutcontact").serialize();
 
-			    Parse.initialize("<?=configGet("APP_PARSE_APIKEY1")?>", "<?=configGet("APP_PARSE_APIKEY2")?>");
-
-			    var ParseObject = Parse.Object.extend("ContactFormObject");
-
-			    var parseObject = new ParseObject();
-
-			    parseObject.save( {formdata:form} ).then(function(object) {
-
-			    	alert("Thank You!");
-
-			    });
-
-			}, 50);
 
 		}
 
-		return false;
+		var timeNow=new Date().getTime();
+
+		//$("#templateForm").css("display","block").prependTo("#layoutcontact");
+
+		function validateEmail(email) {
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\ ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+		}
+
+		$('#formsendbutton').click(function() {
+
+			var name=$('#layoutcontactform_name');
+			($.trim(name.val())=="")?name.addClass('layoutcontacterror'):name.removeClass('layoutcontacterror');
+
+			var email=$('#layoutcontactform_email');
+			($.trim(email.val())=="")?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+
+			// trim email!!!
+			(!validateEmail(email.val()))?email.addClass('layoutcontacterror'):email.removeClass('layoutcontacterror');
+
+			var message=$('#layoutcontactform_message');
+			($.trim(message.val())=="")?message.addClass('layoutcontacterror'):message.removeClass('layoutcontacterror');
+
+			$('#_ref').val(document.referrer);
+			$('#_url').val(document.location);
+			$('#_title').val(document.title);
+
+			var d = new Date(); var dd = d.toDateString(); var dt = d.toTimeString();
+			$('#_time').val(timeNow+','+dd+','+dt);
+			$('#_code').val('');
+
+			var totalErrors=$('.layoutcontacterror').length;
+
+			if(totalErrors==0){
+
+				setTimeout(function(){
+
+				    var form = $("#layoutcontact").serializeArray();
+				    var json_str = JSON.stringify(form,undefined, 2); 
+
+				    Parse.initialize("<?=configGet("APP_PARSE_APIKEY1")?>", "<?=configGet("APP_PARSE_APIKEY2")?>");
+
+				    var ParseObject = Parse.Object.extend("ContactFormObject");
+
+				    var parseObject = new ParseObject();
+
+				    parseObject.save( {pn:"<?=PROJECTNAME?>",s:"Contact Form",formdata:json_str} ).then(function(object) {
+
+				    	alert("Thank You!");
+
+				    });
+
+				}, 50);
+
+			}
+
+			return false;
+
+		});
 
 	});
 
